@@ -24,7 +24,7 @@
 import pandas as pd
 
 # Load the dataset
-df = # YOUR CODE HERE - load sports_data_missing CSV file into the DataFrame
+df = pd.read_csv('../data/sports_data_missing.csv')
 
 # Display the first few rows
 print(df.head())
@@ -32,3 +32,13 @@ print(df.head())
 # Display info about DataFrame
 df.info()
 
+#### Step 2.2: Clean and Preprocess the Data
+#Check for missing or invalid values, and clean the dataset as needed (e.g., fill missing values, handle data inconsistencies). In this case, drop any columns with invalid data.
+
+# Drop rows with invalid data
+df = df.dropna()
+
+# Inspect the cleaned data
+df.info()
+
+print("Data cleaning completed.")
